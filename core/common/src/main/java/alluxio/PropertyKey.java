@@ -87,6 +87,9 @@ public enum PropertyKey {
   UNDERFS_S3A_SERVER_SIDE_ENCRYPTION_ENABLED(Name.UNDERFS_S3A_SERVER_SIDE_ENCRYPTION_ENABLED,
       false),
   UNDERFS_S3A_SOCKET_TIMEOUT_MS(Name.UNDERFS_S3A_SOCKET_TIMEOUT_MS, 50000),
+  UNDERFS_S3A_CONNECTION_TTL_MS(Name.UNDERFS_S3A_CONNECTION_TTL_MS, 50000),
+  UNDERFS_S3A_CONNECTION_TIMEOUT_MS(Name.UNDERFS_S3A_CONNECTION_TIMEOUT_MS, 50000),
+  UNDERFS_S3A_MAX_CONNECTIONS(Name.UNDERFS_S3A_MAX_CONNECTIONS, 22),
 
   //
   // UFS access control related properties
@@ -476,6 +479,12 @@ public enum PropertyKey {
         "alluxio.underfs.s3a.server.side.encryption.enabled";
     public static final String UNDERFS_S3A_SOCKET_TIMEOUT_MS =
         "alluxio.underfs.s3a.socket.timeout.ms";
+    public static final String UNDERFS_S3A_CONNECTION_TTL_MS =
+        "alluxio.underfs.s3a.connection.ttl.ms";
+    public static final String UNDERFS_S3A_CONNECTION_TIMEOUT_MS =
+        "alluxio.underfs.s3a.connection.timeout.ms";
+    public static final String UNDERFS_S3A_MAX_CONNECTIONS =
+        "alluxio.underfs.s3a.max.connections";
     public static final String UNDERFS_S3_ADMIN_THREADS_MAX =
         "alluxio.underfs.s3.admin.threads.max";
     public static final String UNDERFS_S3_DISABLE_DNS_BUCKETS =
