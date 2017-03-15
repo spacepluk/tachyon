@@ -65,7 +65,7 @@ public class S3AInputStream extends InputStream {
   }
 
   @Override
-  public void close() {
+  public void close() throws IOException {
     closeStream();
   }
 
@@ -102,7 +102,7 @@ public class S3AInputStream extends InputStream {
   }
 
   @Override
-  public long skip(long n) {
+  public long skip(long n) throws IOException {
     if (n <= 0) {
       return 0;
     }
@@ -130,8 +130,7 @@ public class S3AInputStream extends InputStream {
   /**
    * Closes the current stream.
    */
-  // TODO(calvin): Investigate if close instead of abort will bring performance benefits.
-  private void closeStream() {
+  private void closeStream() throws IOException {
     if (mIn == null) {
       return;
     }
@@ -139,3 +138,4 @@ public class S3AInputStream extends InputStream {
     mIn = null;
   }
 }
+

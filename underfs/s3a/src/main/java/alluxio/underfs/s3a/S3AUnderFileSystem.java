@@ -131,6 +131,22 @@ public class S3AUnderFileSystem extends UnderFileSystem {
     // Socket timeout
     clientConf.setSocketTimeout(Configuration.getInt(PropertyKey.UNDERFS_S3A_SOCKET_TIMEOUT_MS));
 
+    // Connection timeout
+    if (Configuration.containsKey(PropertyKey.UNDERFS_S3A_CONNECTION_TIMEOUT_MS)) {
+      clientConf.setConnectionTimeout(
+          Configuration.getInt(PropertyKey.UNDERFS_S3A_CONNECTION_TIMEOUT_MS));
+    }
+
+    // Connection TTL
+    if (Configuration.containsKey(PropertyKey.UNDERFS_S3A_CONNECTION_TTL_MS)) {
+      clientConf.setConnectionTTL(Configuration.getInt(PropertyKey.UNDERFS_S3A_CONNECTION_TTL_MS));
+    }
+
+    // Max connections
+    if (Configuration.containsKey(PropertyKey.UNDERFS_S3A_MAX_CONNECTIONS)) {
+      clientConf.setMaxConnections(Configuration.getInt(PropertyKey.UNDERFS_S3A_MAX_CONNECTIONS));
+    }
+
     // HTTP protocol
     if (Configuration.getBoolean(PropertyKey.UNDERFS_S3A_SECURE_HTTP_ENABLED)) {
       clientConf.setProtocol(Protocol.HTTPS);
