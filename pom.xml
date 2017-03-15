@@ -144,7 +144,7 @@
     <cxf.version>2.7.0</cxf.version>
     <findbugs.path>build/findbugs</findbugs.path>
     <glusterfs-hadoop.version>2.3.13</glusterfs-hadoop.version>
-    <hadoop.version>2.2.0</hadoop.version>
+    <hadoop.version>2.8.0-SNAPSHOT</hadoop.version>
     <java.version>1.7</java.version>
     <jersey.version>2.22</jersey.version>
     <jetty.version>9.2.16.v20160414</jetty.version>
@@ -752,7 +752,7 @@
         <module>integration/mesos</module>
       </modules>
       <properties>
-        <hadoop.version>2.6.0</hadoop.version>
+        <hadoop.version>2.8.0-SNAPSHOT</hadoop.version>
       </properties>
     </profile>
 
