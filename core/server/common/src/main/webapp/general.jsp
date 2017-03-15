@@ -41,22 +41,18 @@
                 </tr>
                 <tr>
                   <th>Started:</th>
-                  <!-- <th>${startTime}</th> -->
                   <th><%= request.getAttribute("startTime") %></th>
                 </tr>
                 <tr>
                   <th>Uptime:</th>
-                  <!-- <th>${uptime}</th> -->
                   <th><%= request.getAttribute("uptime") %></th>
                 </tr>
                 <tr>
                   <th>Version:</th>
-                  <!-- <th>${version}</th> -->
                   <th><%= request.getAttribute("version") %></th>
                 </tr>
                 <tr>
                   <th>Running Workers:</th>
-                  <!-- <th>${liveWorkerNodes}</th> -->
                   <th><%= request.getAttribute("liveWorkerNodes") %></th>
                 </tr>
                 <tr>
@@ -89,22 +85,18 @@
               <tbody>
                 <tr>
                   <th>Workers Capacity:</th>
-                  <!-- <th>${capacity}</th> -->
                   <th><%= request.getAttribute("capacity") %></th>
                 </tr>
                 <tr>
                   <th>Workers Free / Used:</th>
-                  <!-- <th>${usedCapacity}</th> -->
                   <th><%= request.getAttribute("freeCapacity") %> / <%= request.getAttribute("usedCapacity") %></th>
                 </tr>
                 <tr>
                   <th>UnderFS Capacity:</th>
-                  <!-- <th>${capacity}</th> -->
                   <th><%= request.getAttribute("diskCapacity") %></th>
                 </tr>
                 <tr>
                   <th>UnderFS Free / Used:</th>
-                  <!-- <th>${freeCapacity}</th> -->
                   <th><%= request.getAttribute("diskFreeCapacity") %> / <%= request.getAttribute("diskUsedCapacity") %></th>
                 </tr>
               </tbody>
