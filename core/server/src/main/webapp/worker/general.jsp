@@ -55,7 +55,6 @@
                 </tr>
                 <tr>
                   <th>Version:</th>
-                  <!-- <th>${version}</th> -->
                   <th><%= request.getAttribute("version") %></th>
                 </tr>
               </tbody>
